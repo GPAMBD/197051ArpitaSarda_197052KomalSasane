@@ -1,0 +1,125 @@
+
+******PYTHON MINIPROJECT FOR GUESSING NUMBER GAME PROGRAM AND OUTPUT******
+
+Name: Arpita Laxminarayan Sarda
+En.no: (197051 IT 2nd year)
+Name: Komal Bharat Sasane
+En.no : (197052 IT 2nd year)
+
+
+PROGRAM: 
+
+import random 
+
+import math 
+
+# Taking Inputs
+
+lower = int(input("Enter Lower bound:- ")) 
+
+ 
+
+# Taking Inputs
+
+upper = int(input("Enter Upper bound:- ")) 
+
+ 
+
+# generating random number between
+
+# the lower and upper
+
+x = random.randint(lower, upper) 
+
+print("\n\tYou've only ", 
+
+       round(math.log(upper - lower + 1, 2)), 
+
+      " chances to guess the integer!\n") 
+
+ 
+
+# Initializing the number of guesses.
+
+count = 0 
+
+ 
+
+# for calculation of minimum number of
+
+# guesses depends upon range
+
+while count < math.log(upper - lower + 1, 2): 
+
+    count += 1 
+
+ 
+
+    # taking guessing number as input 
+
+    guess = int(input("Guess a number:- ")) 
+
+ 
+
+    # Condition testing 
+
+    if x == guess: 
+
+        print("Congratulations you did it in ", 
+
+              count, " try") 
+
+        # Once guessed, loop will break 
+
+        break 
+
+    elif x > guess: 
+
+        print("You guessed too small!") 
+
+    elif x < guess: 
+
+        print("You Guessed too high!") 
+
+ 
+
+# If Guessing is more than required guesses,
+
+# shows this output.
+
+if count >= math.log(upper - lower + 1, 2): 
+
+    print("\nThe number is %d" % x) 
+
+    print("\tBetter Luck Next time!") 
+      
+                           ******
+
+Output : 
+                 
+Enter Lower bound :- 1
+Enter Upper bound :- 188
+        
+          You' ve  only 7 chances to guess the Integer!
+          
+Guess a number :- 50
+You guessed to small! 
+
+Guess a number :- 75
+You guessed to high!      
+
+Guess a number :- 62
+You guessed to high! 
+
+Guess a number :-  56
+You guessed to high!
+
+Guess a number :- 53
+You guessed to small! 
+
+Guess a number :- 54
+Congratulations you did it in 6 try
+
+Process finished with exit code 0
+
+                             ******
